@@ -1,50 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#e8e8e8"
     tools:context="com.rizvi.sumapp.MainActivity">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:orientation="vertical"
+        android:background="@drawable/start_gradient">
+
+        <ImageView
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/calculator"/>
+
+        <TextView
+            android:textColor="#FFFF33"
+            android:fontFamily="cursive"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to Calculator"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:weightSum="4"
+        android:padding="50dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        android:padding="50dp">
+        tools:layout_editor_absoluteY="0dp">
 
         <EditText
-            android:minHeight="30dp"
+            android:minHeight="50dp"
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/button"
-            android:layout_centerHorizontal="true"
-            android:layout_centerInParent="true"
-            android:layout_centerVertical="false"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:textAlignment="center"
             android:hint="Enter 1st number"
             android:inputType="number"
             android:background="@drawable/shape"
-            android:paddingStart="20dp"
             tools:layout_editor_absoluteX="4dp"
             tools:layout_editor_absoluteY="27dp" />
 
         <EditText
-            android:minHeight="30dp"
+            android:textAlignment="center"
+            android:minHeight="50dp"
             android:id="@+id/editText2"
-            android:layout_centerInParent="true"
-            android:paddingStart="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/editText"
             android:layout_marginTop="49dp"
             android:ems="10"
             android:background="@drawable/shape"
@@ -53,27 +76,14 @@
             tools:layout_editor_absoluteX="85dp"
             tools:layout_editor_absoluteY="92dp" />
 
-        <Button
-            android:id="@+id/button"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:background="@drawable/shape"
-            android:text="Calculate!"
-            android:textAppearance="@style/TextAppearance.AppCompat.Button"
-            tools:layout_editor_absoluteX="99dp"
-            tools:layout_editor_absoluteY="184dp" />
-
 
         <RadioGroup
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
             android:gravity="center_horizontal"
             android:id="@+id/rg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@id/button"
-            android:layout_centerInParent="true"
             android:orientation="horizontal">
 
 
@@ -81,7 +91,6 @@
                 android:id="@+id/radioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="28dp"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:text="+" />
@@ -116,7 +125,21 @@
 
         </RadioGroup>
 
-    </RelativeLayout>
+        <Button
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:id="@+id/button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:text="Calculate"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            tools:layout_editor_absoluteX="99dp"
+            tools:layout_editor_absoluteY="184dp" />
+
+    </LinearLayout>
 
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
