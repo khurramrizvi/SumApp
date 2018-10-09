@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#e8e8e8"
     tools:context="com.rizvi.sumapp.MainActivity">
 
     <RelativeLayout
@@ -11,26 +12,30 @@
         android:layout_height="match_parent"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        tools:layout_editor_absoluteY="0dp"
+        android:padding="50dp">
 
         <EditText
+            android:minHeight="30dp"
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignStart="@+id/button"
-            android:layout_centerHorizontal="false"
+            android:layout_centerHorizontal="true"
             android:layout_centerInParent="true"
             android:layout_centerVertical="false"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:hint="Enter 1st number"
             android:inputType="number"
+            android:background="@drawable/shape"
             android:paddingStart="20dp"
             tools:layout_editor_absoluteX="4dp"
             tools:layout_editor_absoluteY="27dp" />
 
         <EditText
+            android:minHeight="30dp"
             android:id="@+id/editText2"
             android:layout_centerInParent="true"
             android:paddingStart="20dp"
@@ -42,6 +47,7 @@
             android:layout_below="@+id/editText"
             android:layout_marginTop="49dp"
             android:ems="10"
+            android:background="@drawable/shape"
             android:hint="Enter 2nd Number"
             android:inputType="number"
             tools:layout_editor_absoluteX="85dp"
@@ -50,10 +56,11 @@
         <Button
             android:id="@+id/button"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:background="@drawable/shape"
             android:text="Calculate!"
             android:textAppearance="@style/TextAppearance.AppCompat.Button"
             tools:layout_editor_absoluteX="99dp"
@@ -61,11 +68,11 @@
 
 
         <RadioGroup
+            android:gravity="center_horizontal"
             android:id="@+id/rg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@id/button"
-            android:layout_marginLeft="60dp"
             android:layout_centerInParent="true"
             android:orientation="horizontal">
 
@@ -74,45 +81,37 @@
                 android:id="@+id/radioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/button"
-                android:layout_alignStart="@+id/editText2"
                 android:layout_marginBottom="28dp"
-                android:layout_marginStart="29dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
                 android:text="+" />
 
             <RadioButton
                 android:id="@+id/radioButton2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/radioButton"
-                android:layout_alignBottom="@+id/radioButton"
-                android:layout_marginRight="2dp"
                 android:layout_marginStart="20dp"
-                android:layout_toEndOf="@+id/radioButton"
+                android:textStyle="bold"
+                android:textSize="20sp"
                 android:text="-" />
 
             <RadioButton
                 android:id="@+id/radioButton3"
-                android:layout_marginRight="2dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/radioButton2"
-                android:layout_alignBottom="@+id/radioButton2"
                 android:layout_marginStart="19dp"
-                android:layout_toEndOf="@+id/radioButton2"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 android:text="*" />
 
             <RadioButton
                 android:id="@+id/radioButton4"
-                android:layout_marginRight="2dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/radioButton3"
                 android:layout_marginStart="20dp"
-                android:layout_toEndOf="@+id/radioButton3"
+                android:textStyle="bold"
+                android:textSize="20sp"
                 android:text="/" />
-
-
 
 
         </RadioGroup>

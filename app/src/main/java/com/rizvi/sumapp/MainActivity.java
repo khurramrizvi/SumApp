@@ -1,8 +1,9 @@
 package com.rizvi.sumapp;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -20,6 +21,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+
+        //Bind All Components
         final EditText editText = findViewById(R.id.editText);
         final EditText editText2 = findViewById(R.id.editText2);
         Button button = findViewById(R.id.button);
@@ -28,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         final RadioButton radioButton2 = findViewById(R.id.radioButton2);
         final RadioButton radioButton3 = findViewById(R.id.radioButton3);
         final RadioButton radioButton4 = findViewById(R.id.radioButton4);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
